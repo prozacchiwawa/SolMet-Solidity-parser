@@ -81,31 +81,35 @@ public class Main {
 
 				for (String solPath : solPaths) {
 					System.out.println("Parsing " + new File(solPath).getPath());
-					String contractCode = readFile(solPath, Charset.forName("UTF-8"));
-					CharStream charStream = CharStreams.fromString(contractCode);
-					SolidityLexer lexer = new SolidityLexer(charStream);
-					TokenStream tokens = new CommonTokenStream(lexer);
-					SolidityParser parser = new SolidityParser(tokens);
+          try {
+              String contractCode = readFile(solPath, Charset.forName("UTF-8"));
+              CharStream charStream = CharStreams.fromString(contractCode);
+              SolidityLexer lexer = new SolidityLexer(charStream);
+              TokenStream tokens = new CommonTokenStream(lexer);
+              SolidityParser parser = new SolidityParser(tokens);
 
-					ContractVisitor contractVisitor = new ContractVisitor(contractCode);
-					contractVisitor.visit(parser.sourceUnit());
-					Map<ContractDefinitionContext, Integer[]> metrics = contractVisitor.getMetricMap();
-					for (ContractDefinitionContext contract : metrics.keySet()) {
-						ArrayList<Object> record = new ArrayList<Object>();
-						record.add(new File(solPath).getName());
-						record.add(new File(solPath).getParentFile().getName().toLowerCase());
-						record.add(contract.getChild(1).getText());
-						record.add(contract.getChild(0).getText());
-						record.addAll(Arrays.asList(metrics.get(contract)));
-						record.add(metrics.get(contract)[3] == 0 ? 0f : (double) metrics.get(contract)[4] / metrics.get(contract)[3]);
-						record.add(metrics.get(contract)[3] == 0 ? 0f : (double) metrics.get(contract)[5] / metrics.get(contract)[3]);
-						record.add(metrics.get(contract)[3] == 0 ? 0f : (double) metrics.get(contract)[6] / metrics.get(contract)[3]);
-						record.add(metrics.get(contract)[3] == 0 ? 0f : (double) metrics.get(contract)[7] / metrics.get(contract)[3]);
-						record.add(metrics.get(contract)[3] == 0 ? 0f : (double) metrics.get(contract)[8] / metrics.get(contract)[3]);
-						record.add(metrics.get(contract)[3] == 0 ? 0f : (double) metrics.get(contract)[14] / metrics.get(contract)[3]);
-						csvPrinter.printRecord(record);
-						csvPrinter.flush();
-					}
+              ContractVisitor contractVisitor = new ContractVisitor(contractCode);
+              contractVisitor.visit(parser.sourceUnit());
+              Map<ContractDefinitionContext, Integer[]> metrics = contractVisitor.getMetricMap();
+              for (ContractDefinitionContext contract : metrics.keySet()) {
+                  ArrayList<Object> record = new ArrayList<Object>();
+                  record.add(new File(solPath).getName());
+                  record.add(new File(solPath).getParentFile().getName().toLowerCase());
+                  record.add(contract.getChild(1).getText());
+                  record.add(contract.getChild(0).getText());
+                  record.addAll(Arrays.asList(metrics.get(contract)));
+                  record.add(metrics.get(contract)[3] == 0 ? 0f : (double) metrics.get(contract)[4] / metrics.get(contract)[3]);
+                  record.add(metrics.get(contract)[3] == 0 ? 0f : (double) metrics.get(contract)[5] / metrics.get(contract)[3]);
+                  record.add(metrics.get(contract)[3] == 0 ? 0f : (double) metrics.get(contract)[6] / metrics.get(contract)[3]);
+                  record.add(metrics.get(contract)[3] == 0 ? 0f : (double) metrics.get(contract)[7] / metrics.get(contract)[3]);
+                  record.add(metrics.get(contract)[3] == 0 ? 0f : (double) metrics.get(contract)[8] / metrics.get(contract)[3]);
+                  record.add(metrics.get(contract)[3] == 0 ? 0f : (double) metrics.get(contract)[14] / metrics.get(contract)[3]);
+                  csvPrinter.printRecord(record);
+                  csvPrinter.flush();
+              }
+          } catch (Exception e) {
+              System.err.println("error processing file " + solPath + ": " + e.toString());
+          }
 				}
 			}
 		} catch (ParseException exp) {
