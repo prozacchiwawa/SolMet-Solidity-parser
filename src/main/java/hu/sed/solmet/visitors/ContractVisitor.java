@@ -10,6 +10,7 @@ import org.antlr.v4.runtime.misc.NotNull;
 import hu.sed.parser.antlr4.grammar.solidity.SolidityBaseVisitor;
 import hu.sed.parser.antlr4.grammar.solidity.SolidityParser.BlockContext;
 import hu.sed.parser.antlr4.grammar.solidity.SolidityParser.ContractDefinitionContext;
+import hu.sed.parser.antlr4.grammar.solidity.SolidityParser.StructDefinitionContext;
 import hu.sed.parser.antlr4.grammar.solidity.SolidityParser.FunctionDefinitionContext;
 import hu.sed.parser.antlr4.grammar.solidity.SolidityParser.InheritanceSpecifierContext;
 import hu.sed.parser.antlr4.grammar.solidity.SolidityParser.SourceUnitContext;
@@ -64,8 +65,8 @@ public class ContractVisitor extends SolidityBaseVisitor<Void> {
 		mets[6] = 0;
 		mets[7] = 0;
 		mets[8] = 0;
-		mets[9] = calculateDIT(ctx);
-		mets[10] = calculateNOA(ctx);
+		mets[9] = 0; // calculateDIT(ctx);
+		mets[10] = 0; // calculateNOA(ctx);
 		mets[11] = ncv.getNODCount(ctx);
 		mets[12] = cboCounter.calculateCBO(ctx);
 		mets[13] = 0;
@@ -77,7 +78,7 @@ public class ContractVisitor extends SolidityBaseVisitor<Void> {
 		return null;
 	}
 
-	private int calculateDIT(ContractDefinitionContext ctx) {
+  private int calculateDIT(ContractDefinitionContext ctx) {
 		int dit = 0;
 		for (InheritanceSpecifierContext ictx : ctx.inheritanceSpecifier()) {
 			String baseName = ictx.userDefinedTypeName().identifier().get(0).getText();
@@ -102,6 +103,9 @@ public class ContractVisitor extends SolidityBaseVisitor<Void> {
 
 	@Override
 	public Void visitFunctionDefinition(@NotNull FunctionDefinitionContext ctx) {
+    if (currentContract == null) {
+        return null;
+    }
 		contractMetrics.get(currentContract)[3]++;
 		int mcc = new McCabeCounterVisitor().visitFunctionDefinition(ctx);
 		contractMetrics.get(currentContract)[4] += mcc;

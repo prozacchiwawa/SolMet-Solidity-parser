@@ -21,10 +21,13 @@ public class NOICounterVisitor extends SolidityBaseVisitor<Integer> {
 
 	@Override
 	public Integer visitFunctionDefinition(@NotNull FunctionDefinitionContext ctx) {
+      /*
 		currentFunc = ctx.identifier() == null ? "anonym" + anonymCtr++ : ctx.identifier().getText();
 		funcCalls.put(currentFunc, new HashSet<>());
 		super.visitFunctionDefinition(ctx);
 		return funcCalls.get(currentFunc).size();
+      */
+    return 0;
 	}
 
 	@Override

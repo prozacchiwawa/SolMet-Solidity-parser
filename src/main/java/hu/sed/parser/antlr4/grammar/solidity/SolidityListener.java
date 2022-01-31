@@ -1,4 +1,4 @@
-// Generated from solidity-antlr4-master\Solidity.g4 by ANTLR 4.7
+// Generated from Solidity.g4 by ANTLR 4.7.2
 package hu.sed.parser.antlr4.grammar.solidity;
 import org.antlr.v4.runtime.tree.ParseTreeListener;
 
@@ -98,6 +98,16 @@ public interface SolidityListener extends ParseTreeListener {
 	 */
 	void exitImportDirective(SolidityParser.ImportDirectiveContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link SolidityParser#importPath}.
+	 * @param ctx the parse tree
+	 */
+	void enterImportPath(SolidityParser.ImportPathContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#importPath}.
+	 * @param ctx the parse tree
+	 */
+	void exitImportPath(SolidityParser.ImportPathContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link SolidityParser#contractDefinition}.
 	 * @param ctx the parse tree
 	 */
@@ -138,6 +148,36 @@ public interface SolidityListener extends ParseTreeListener {
 	 */
 	void exitStateVariableDeclaration(SolidityParser.StateVariableDeclarationContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link SolidityParser#fileLevelConstant}.
+	 * @param ctx the parse tree
+	 */
+	void enterFileLevelConstant(SolidityParser.FileLevelConstantContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#fileLevelConstant}.
+	 * @param ctx the parse tree
+	 */
+	void exitFileLevelConstant(SolidityParser.FileLevelConstantContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SolidityParser#customErrorDefinition}.
+	 * @param ctx the parse tree
+	 */
+	void enterCustomErrorDefinition(SolidityParser.CustomErrorDefinitionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#customErrorDefinition}.
+	 * @param ctx the parse tree
+	 */
+	void exitCustomErrorDefinition(SolidityParser.CustomErrorDefinitionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SolidityParser#typeDefinition}.
+	 * @param ctx the parse tree
+	 */
+	void enterTypeDefinition(SolidityParser.TypeDefinitionContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#typeDefinition}.
+	 * @param ctx the parse tree
+	 */
+	void exitTypeDefinition(SolidityParser.TypeDefinitionContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link SolidityParser#usingForDeclaration}.
 	 * @param ctx the parse tree
 	 */
@@ -157,16 +197,6 @@ public interface SolidityListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitStructDefinition(SolidityParser.StructDefinitionContext ctx);
-	/**
-	 * Enter a parse tree produced by {@link SolidityParser#constructorDefinition}.
-	 * @param ctx the parse tree
-	 */
-	void enterConstructorDefinition(SolidityParser.ConstructorDefinitionContext ctx);
-	/**
-	 * Exit a parse tree produced by {@link SolidityParser#constructorDefinition}.
-	 * @param ctx the parse tree
-	 */
-	void exitConstructorDefinition(SolidityParser.ConstructorDefinitionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SolidityParser#modifierDefinition}.
 	 * @param ctx the parse tree
@@ -197,6 +227,16 @@ public interface SolidityListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitFunctionDefinition(SolidityParser.FunctionDefinitionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SolidityParser#functionDescriptor}.
+	 * @param ctx the parse tree
+	 */
+	void enterFunctionDescriptor(SolidityParser.FunctionDescriptorContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#functionDescriptor}.
+	 * @param ctx the parse tree
+	 */
+	void exitFunctionDescriptor(SolidityParser.FunctionDescriptorContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SolidityParser#returnParameters}.
 	 * @param ctx the parse tree
@@ -338,6 +378,16 @@ public interface SolidityListener extends ParseTreeListener {
 	 */
 	void exitUserDefinedTypeName(SolidityParser.UserDefinedTypeNameContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link SolidityParser#mappingKey}.
+	 * @param ctx the parse tree
+	 */
+	void enterMappingKey(SolidityParser.MappingKeyContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#mappingKey}.
+	 * @param ctx the parse tree
+	 */
+	void exitMappingKey(SolidityParser.MappingKeyContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link SolidityParser#mapping}.
 	 * @param ctx the parse tree
 	 */
@@ -418,6 +468,26 @@ public interface SolidityListener extends ParseTreeListener {
 	 */
 	void exitIfStatement(SolidityParser.IfStatementContext ctx);
 	/**
+	 * Enter a parse tree produced by {@link SolidityParser#tryStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterTryStatement(SolidityParser.TryStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#tryStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitTryStatement(SolidityParser.TryStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SolidityParser#catchClause}.
+	 * @param ctx the parse tree
+	 */
+	void enterCatchClause(SolidityParser.CatchClauseContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#catchClause}.
+	 * @param ctx the parse tree
+	 */
+	void exitCatchClause(SolidityParser.CatchClauseContext ctx);
+	/**
 	 * Enter a parse tree produced by {@link SolidityParser#whileStatement}.
 	 * @param ctx the parse tree
 	 */
@@ -437,6 +507,16 @@ public interface SolidityListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitSimpleStatement(SolidityParser.SimpleStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SolidityParser#uncheckedStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterUncheckedStatement(SolidityParser.UncheckedStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#uncheckedStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitUncheckedStatement(SolidityParser.UncheckedStatementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SolidityParser#forStatement}.
 	 * @param ctx the parse tree
@@ -517,6 +597,16 @@ public interface SolidityListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitEmitStatement(SolidityParser.EmitStatementContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SolidityParser#revertStatement}.
+	 * @param ctx the parse tree
+	 */
+	void enterRevertStatement(SolidityParser.RevertStatementContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#revertStatement}.
+	 * @param ctx the parse tree
+	 */
+	void exitRevertStatement(SolidityParser.RevertStatementContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SolidityParser#variableDeclarationStatement}.
 	 * @param ctx the parse tree
@@ -657,6 +747,16 @@ public interface SolidityListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitAssemblyExpression(SolidityParser.AssemblyExpressionContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SolidityParser#assemblyMember}.
+	 * @param ctx the parse tree
+	 */
+	void enterAssemblyMember(SolidityParser.AssemblyMemberContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#assemblyMember}.
+	 * @param ctx the parse tree
+	 */
+	void exitAssemblyMember(SolidityParser.AssemblyMemberContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SolidityParser#assemblyCall}.
 	 * @param ctx the parse tree
@@ -818,15 +918,15 @@ public interface SolidityListener extends ParseTreeListener {
 	 */
 	void exitTupleExpression(SolidityParser.TupleExpressionContext ctx);
 	/**
-	 * Enter a parse tree produced by {@link SolidityParser#elementaryTypeNameExpression}.
+	 * Enter a parse tree produced by {@link SolidityParser#typeNameExpression}.
 	 * @param ctx the parse tree
 	 */
-	void enterElementaryTypeNameExpression(SolidityParser.ElementaryTypeNameExpressionContext ctx);
+	void enterTypeNameExpression(SolidityParser.TypeNameExpressionContext ctx);
 	/**
-	 * Exit a parse tree produced by {@link SolidityParser#elementaryTypeNameExpression}.
+	 * Exit a parse tree produced by {@link SolidityParser#typeNameExpression}.
 	 * @param ctx the parse tree
 	 */
-	void exitElementaryTypeNameExpression(SolidityParser.ElementaryTypeNameExpressionContext ctx);
+	void exitTypeNameExpression(SolidityParser.TypeNameExpressionContext ctx);
 	/**
 	 * Enter a parse tree produced by {@link SolidityParser#numberLiteral}.
 	 * @param ctx the parse tree
@@ -847,4 +947,34 @@ public interface SolidityListener extends ParseTreeListener {
 	 * @param ctx the parse tree
 	 */
 	void exitIdentifier(SolidityParser.IdentifierContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SolidityParser#hexLiteral}.
+	 * @param ctx the parse tree
+	 */
+	void enterHexLiteral(SolidityParser.HexLiteralContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#hexLiteral}.
+	 * @param ctx the parse tree
+	 */
+	void exitHexLiteral(SolidityParser.HexLiteralContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SolidityParser#overrideSpecifier}.
+	 * @param ctx the parse tree
+	 */
+	void enterOverrideSpecifier(SolidityParser.OverrideSpecifierContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#overrideSpecifier}.
+	 * @param ctx the parse tree
+	 */
+	void exitOverrideSpecifier(SolidityParser.OverrideSpecifierContext ctx);
+	/**
+	 * Enter a parse tree produced by {@link SolidityParser#stringLiteral}.
+	 * @param ctx the parse tree
+	 */
+	void enterStringLiteral(SolidityParser.StringLiteralContext ctx);
+	/**
+	 * Exit a parse tree produced by {@link SolidityParser#stringLiteral}.
+	 * @param ctx the parse tree
+	 */
+	void exitStringLiteral(SolidityParser.StringLiteralContext ctx);
 }

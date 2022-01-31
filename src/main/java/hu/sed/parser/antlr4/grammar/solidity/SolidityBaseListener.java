@@ -1,4 +1,4 @@
-// Generated from solidity-antlr4-master\Solidity.g4 by ANTLR 4.7
+// Generated from Solidity.g4 by ANTLR 4.7.2
 package hu.sed.parser.antlr4.grammar.solidity;
 
 import org.antlr.v4.runtime.ParserRuleContext;
@@ -124,6 +124,18 @@ public class SolidityBaseListener implements SolidityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterImportPath(SolidityParser.ImportPathContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitImportPath(SolidityParser.ImportPathContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterContractDefinition(SolidityParser.ContractDefinitionContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -172,6 +184,42 @@ public class SolidityBaseListener implements SolidityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterFileLevelConstant(SolidityParser.FileLevelConstantContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFileLevelConstant(SolidityParser.FileLevelConstantContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCustomErrorDefinition(SolidityParser.CustomErrorDefinitionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCustomErrorDefinition(SolidityParser.CustomErrorDefinitionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterTypeDefinition(SolidityParser.TypeDefinitionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTypeDefinition(SolidityParser.TypeDefinitionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterUsingForDeclaration(SolidityParser.UsingForDeclarationContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -191,18 +239,6 @@ public class SolidityBaseListener implements SolidityListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitStructDefinition(SolidityParser.StructDefinitionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void enterConstructorDefinition(SolidityParser.ConstructorDefinitionContext ctx) { }
-	/**
-	 * {@inheritDoc}
-	 *
-	 * <p>The default implementation does nothing.</p>
-	 */
-	@Override public void exitConstructorDefinition(SolidityParser.ConstructorDefinitionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -239,6 +275,18 @@ public class SolidityBaseListener implements SolidityListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitFunctionDefinition(SolidityParser.FunctionDefinitionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterFunctionDescriptor(SolidityParser.FunctionDescriptorContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitFunctionDescriptor(SolidityParser.FunctionDescriptorContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -412,6 +460,18 @@ public class SolidityBaseListener implements SolidityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterMappingKey(SolidityParser.MappingKeyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitMappingKey(SolidityParser.MappingKeyContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterMapping(SolidityParser.MappingContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -508,6 +568,30 @@ public class SolidityBaseListener implements SolidityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
+	@Override public void enterTryStatement(SolidityParser.TryStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitTryStatement(SolidityParser.TryStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterCatchClause(SolidityParser.CatchClauseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitCatchClause(SolidityParser.CatchClauseContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
 	@Override public void enterWhileStatement(SolidityParser.WhileStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
@@ -527,6 +611,18 @@ public class SolidityBaseListener implements SolidityListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitSimpleStatement(SolidityParser.SimpleStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterUncheckedStatement(SolidityParser.UncheckedStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitUncheckedStatement(SolidityParser.UncheckedStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -623,6 +719,18 @@ public class SolidityBaseListener implements SolidityListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitEmitStatement(SolidityParser.EmitStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterRevertStatement(SolidityParser.RevertStatementContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitRevertStatement(SolidityParser.RevertStatementContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -791,6 +899,18 @@ public class SolidityBaseListener implements SolidityListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitAssemblyExpression(SolidityParser.AssemblyExpressionContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterAssemblyMember(SolidityParser.AssemblyMemberContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitAssemblyMember(SolidityParser.AssemblyMemberContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -988,13 +1108,13 @@ public class SolidityBaseListener implements SolidityListener {
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void enterElementaryTypeNameExpression(SolidityParser.ElementaryTypeNameExpressionContext ctx) { }
+	@Override public void enterTypeNameExpression(SolidityParser.TypeNameExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
 	 * <p>The default implementation does nothing.</p>
 	 */
-	@Override public void exitElementaryTypeNameExpression(SolidityParser.ElementaryTypeNameExpressionContext ctx) { }
+	@Override public void exitTypeNameExpression(SolidityParser.TypeNameExpressionContext ctx) { }
 	/**
 	 * {@inheritDoc}
 	 *
@@ -1019,6 +1139,42 @@ public class SolidityBaseListener implements SolidityListener {
 	 * <p>The default implementation does nothing.</p>
 	 */
 	@Override public void exitIdentifier(SolidityParser.IdentifierContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterHexLiteral(SolidityParser.HexLiteralContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitHexLiteral(SolidityParser.HexLiteralContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterOverrideSpecifier(SolidityParser.OverrideSpecifierContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitOverrideSpecifier(SolidityParser.OverrideSpecifierContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void enterStringLiteral(SolidityParser.StringLiteralContext ctx) { }
+	/**
+	 * {@inheritDoc}
+	 *
+	 * <p>The default implementation does nothing.</p>
+	 */
+	@Override public void exitStringLiteral(SolidityParser.StringLiteralContext ctx) { }
 
 	/**
 	 * {@inheritDoc}

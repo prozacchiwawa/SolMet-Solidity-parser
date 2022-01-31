@@ -1,4 +1,4 @@
-// Generated from solidity-antlr4-master\Solidity.g4 by ANTLR 4.7
+// Generated from Solidity.g4 by ANTLR 4.7.2
 package hu.sed.parser.antlr4.grammar.solidity;
 import org.antlr.v4.runtime.tree.ParseTreeVisitor;
 
@@ -65,6 +65,12 @@ public interface SolidityVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitImportDirective(SolidityParser.ImportDirectiveContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link SolidityParser#importPath}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitImportPath(SolidityParser.ImportPathContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link SolidityParser#contractDefinition}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -89,6 +95,24 @@ public interface SolidityVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitStateVariableDeclaration(SolidityParser.StateVariableDeclarationContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link SolidityParser#fileLevelConstant}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFileLevelConstant(SolidityParser.FileLevelConstantContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SolidityParser#customErrorDefinition}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCustomErrorDefinition(SolidityParser.CustomErrorDefinitionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SolidityParser#typeDefinition}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTypeDefinition(SolidityParser.TypeDefinitionContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link SolidityParser#usingForDeclaration}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -100,12 +124,6 @@ public interface SolidityVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitStructDefinition(SolidityParser.StructDefinitionContext ctx);
-	/**
-	 * Visit a parse tree produced by {@link SolidityParser#constructorDefinition}.
-	 * @param ctx the parse tree
-	 * @return the visitor result
-	 */
-	T visitConstructorDefinition(SolidityParser.ConstructorDefinitionContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link SolidityParser#modifierDefinition}.
 	 * @param ctx the parse tree
@@ -124,6 +142,12 @@ public interface SolidityVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitFunctionDefinition(SolidityParser.FunctionDefinitionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SolidityParser#functionDescriptor}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitFunctionDescriptor(SolidityParser.FunctionDescriptorContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link SolidityParser#returnParameters}.
 	 * @param ctx the parse tree
@@ -209,6 +233,12 @@ public interface SolidityVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitUserDefinedTypeName(SolidityParser.UserDefinedTypeNameContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link SolidityParser#mappingKey}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitMappingKey(SolidityParser.MappingKeyContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link SolidityParser#mapping}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -257,6 +287,18 @@ public interface SolidityVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitIfStatement(SolidityParser.IfStatementContext ctx);
 	/**
+	 * Visit a parse tree produced by {@link SolidityParser#tryStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitTryStatement(SolidityParser.TryStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SolidityParser#catchClause}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitCatchClause(SolidityParser.CatchClauseContext ctx);
+	/**
 	 * Visit a parse tree produced by {@link SolidityParser#whileStatement}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
@@ -268,6 +310,12 @@ public interface SolidityVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitSimpleStatement(SolidityParser.SimpleStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SolidityParser#uncheckedStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitUncheckedStatement(SolidityParser.UncheckedStatementContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link SolidityParser#forStatement}.
 	 * @param ctx the parse tree
@@ -316,6 +364,12 @@ public interface SolidityVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitEmitStatement(SolidityParser.EmitStatementContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SolidityParser#revertStatement}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitRevertStatement(SolidityParser.RevertStatementContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link SolidityParser#variableDeclarationStatement}.
 	 * @param ctx the parse tree
@@ -400,6 +454,12 @@ public interface SolidityVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitAssemblyExpression(SolidityParser.AssemblyExpressionContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SolidityParser#assemblyMember}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitAssemblyMember(SolidityParser.AssemblyMemberContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link SolidityParser#assemblyCall}.
 	 * @param ctx the parse tree
@@ -497,11 +557,11 @@ public interface SolidityVisitor<T> extends ParseTreeVisitor<T> {
 	 */
 	T visitTupleExpression(SolidityParser.TupleExpressionContext ctx);
 	/**
-	 * Visit a parse tree produced by {@link SolidityParser#elementaryTypeNameExpression}.
+	 * Visit a parse tree produced by {@link SolidityParser#typeNameExpression}.
 	 * @param ctx the parse tree
 	 * @return the visitor result
 	 */
-	T visitElementaryTypeNameExpression(SolidityParser.ElementaryTypeNameExpressionContext ctx);
+	T visitTypeNameExpression(SolidityParser.TypeNameExpressionContext ctx);
 	/**
 	 * Visit a parse tree produced by {@link SolidityParser#numberLiteral}.
 	 * @param ctx the parse tree
@@ -514,4 +574,22 @@ public interface SolidityVisitor<T> extends ParseTreeVisitor<T> {
 	 * @return the visitor result
 	 */
 	T visitIdentifier(SolidityParser.IdentifierContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SolidityParser#hexLiteral}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitHexLiteral(SolidityParser.HexLiteralContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SolidityParser#overrideSpecifier}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitOverrideSpecifier(SolidityParser.OverrideSpecifierContext ctx);
+	/**
+	 * Visit a parse tree produced by {@link SolidityParser#stringLiteral}.
+	 * @param ctx the parse tree
+	 * @return the visitor result
+	 */
+	T visitStringLiteral(SolidityParser.StringLiteralContext ctx);
 }
